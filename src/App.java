@@ -15,5 +15,9 @@ public class App {
 
         int divisaoDasIdades = calculadoraDeIdades.dividir(100, 10);
         System.out.println( "Divisão das Idades = " + divisaoDasIdades);
+
+        Comparador comparadorDeValores = new Comparador();
+        boolean compararValores = comparadorDeValores.menorQue(20,10);
+        System.out.println( "ValorUm menor que ValorDois? " + compararValores);
     }
 }

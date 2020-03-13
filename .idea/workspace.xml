@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb7c44fb-8bb2-4012-9837-d6b1209c0023" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Comparador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercício3/Aluno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercício3/App.java" afterDir="false" />
+    <list default="true" id="6d47c1cc-0c0e-4d5a-8997-adac868b9139" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Arma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Barbaro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Clerigo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Combate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Druida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Feiticeiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Guerreiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Magia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/Mago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimuladorRPG/PoderDivino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercício3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercício3/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="reset-01" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -23,7 +36,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Ynzx2T2lEIKeChV1sAXuRKOLAn" />
+  <component name="ProjectId" id="1Yrqv82wxJ0dO7IFVenQp2Kq3Kx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,9 +48,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.App (1)">
+  <component name="RunManager" selected="Application.Combate">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="reset-01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercício3.App" />
       <module name="reset-01" />
       <extension name="coverage">
@@ -47,15 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+    <configuration name="Combate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SimuladorRPG.Combate" />
       <module name="reset-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SimuladorRPG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Combate" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
       </list>
@@ -66,30 +105,46 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cb7c44fb-8bb2-4012-9837-d6b1209c0023" name="Default Changelist" comment="" />
-      <created>1583593388699</created>
+      <changelist id="6d47c1cc-0c0e-4d5a-8997-adac868b9139" name="Default Changelist" comment="" />
+      <created>1583711288762</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583593388699</updated>
+      <updated>1583711288762</updated>
+      <workItem from="1583711292458" duration="1566000" />
+      <workItem from="1583790777289" duration="9879000" />
+      <workItem from="1583888585954" duration="2879000" />
+      <workItem from="1583966206028" duration="7640000" />
+      <workItem from="1584048366096" duration="10727000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583611930753">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="980" height="268" key="GridCell.Tab.0.bottom" timestamp="1584059168045">
+      <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583611930753" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583611930753">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="980" height="268" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1584059168045" />
+    <state width="980" height="268" key="GridCell.Tab.0.center" timestamp="1584059168045">
+      <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583611930753" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583611930753">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="980" height="268" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1584059168045" />
+    <state width="980" height="268" key="GridCell.Tab.0.left" timestamp="1584059168045">
+      <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583611930753" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583611930753">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="980" height="268" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1584059168045" />
+    <state width="980" height="268" key="GridCell.Tab.0.right" timestamp="1584059168045">
+      <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583611930753" />
+    <state width="980" height="268" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1584059168045" />
+    <state x="13" y="0" key="SettingsEditor" timestamp="1583711432176">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="13" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1583711432176" />
+    <state x="168" y="157" key="run.anything.popup" timestamp="1583794211572">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="168" y="157" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1583794211572" />
   </component>
 </project>

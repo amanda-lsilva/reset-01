@@ -14,10 +14,6 @@ public class Item {
         this.quantidade = quantidade;
     }
 
-    private double calculoValorTotal (){
-        return valorTotal = this.valor * this.quantidade;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -34,7 +30,4 @@ public class Item {
         return quantidade;
     }
 
-    public void imprimirLista () {
-        System.out.println("[" + segmento + "]" + nome + " (" + quantidade + " ) - " + valor + " | " + valorTotal);
-    }
 }

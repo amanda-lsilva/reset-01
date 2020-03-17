@@ -1,7 +1,7 @@
 package exercicio3;
 
 public enum Segmento {
-    ALIMENTACAO;
-    LIMPEZA;
+    ALIMENTACAO,
+    LIMPEZA,
     HIGIENE;
 }

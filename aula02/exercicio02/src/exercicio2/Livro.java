@@ -15,6 +15,6 @@ public class Livro {
     }
 
     public void imprimirLivro () {
-        System.out.println(titulo);
+        System.out.println(categoria + " - " + titulo + " (" + autor + "): " + status);
     }
 }

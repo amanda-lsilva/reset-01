@@ -92,12 +92,13 @@ public class Usuario {
     }
 
     // Cálculo da Idade
-    public double idadeAtual(LocalDate dataNascimento){
+    public double idadeAtual(LocalDate dataNascimento) {
         Period p = Period.between(dataNascimento, LocalDate.now());
         int idade = p.getYears();
         return idade;
     }
 
+    //toString
     @Override
     public String toString() {
         return "Usuario{" +

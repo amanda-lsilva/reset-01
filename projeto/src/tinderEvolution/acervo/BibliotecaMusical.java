@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import tinderEvolution.dominio.Musica;
 
+// Criação e Manutenção da Biblioteca de Músicas
 public class BibliotecaMusical {
 
     private static int contador = 1;

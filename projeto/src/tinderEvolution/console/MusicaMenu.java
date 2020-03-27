@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
+// Menu de Funcionalidade da Música
 public class MusicaMenu {
 
     private MusicaGerenciador gerenciador;

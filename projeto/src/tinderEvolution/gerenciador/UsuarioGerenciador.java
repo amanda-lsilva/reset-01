@@ -3,8 +3,6 @@ package tinderEvolution.gerenciador;
 import tinderEvolution.acervo.ListaUsuario;
 import tinderEvolution.dominio.Usuario;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.List;
 
 // Regras de Negócio do Cadastro de Usuários
@@ -26,14 +24,14 @@ public class UsuarioGerenciador {
         }
 
         // Validação idade maior que 18 anos.
-        if(usuario.idadeAtual(usuario.getDataNascimento())<18){
+        if (usuario.idadeAtual(usuario.getDataNascimento()) < 18) {
             System.out.println("Somente para maiores de 18 anos.");
             return null;
         }
 
         // Validação se todos os campos foram preenchidos
         // Falta validar latitude e longitude
-        if(usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getTelefone().isEmpty() || usuario.getDataNascimento() == null || usuario.getBio().isEmpty()){
+        if (usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getTelefone().isEmpty() || usuario.getDataNascimento() == null || usuario.getBio().isEmpty()) {
             System.out.println("Campos obrigatórios não informados.");
             return null;
         }

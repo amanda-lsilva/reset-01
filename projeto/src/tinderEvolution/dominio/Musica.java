@@ -2,6 +2,7 @@ package tinderEvolution.dominio;
 
 import java.time.LocalDate;
 
+// Cadastro de Música
 public class Musica {
 
     private int id;
@@ -10,6 +11,7 @@ public class Musica {
     private EstiloMusical estiloMusical;
     private LocalDate lancamento;
 
+    // Construtor
     public Musica(String nome, String artista, EstiloMusical estiloMusical, LocalDate lancamento) {
         this.nome = nome;
         this.artista = artista;
@@ -17,6 +19,7 @@ public class Musica {
         this.lancamento = lancamento;
     }
 
+    // Getter e Setter
     public int getId() {
         return id;
     }
@@ -57,6 +60,7 @@ public class Musica {
         this.lancamento = lancamento;
     }
 
+    //toString
     @Override
     public String toString() {
         return "Musica{" +

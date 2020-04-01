@@ -49,5 +49,5 @@ public class Combate {
         System.out.println("Personagem " + jozan.nome);
         System.out.println("Vida: " + jozan.vida);
         System.out.println("Fé: " + jozan.fe);
-    }
+        }
 }

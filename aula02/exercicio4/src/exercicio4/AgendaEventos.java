@@ -10,7 +10,7 @@ public class AgendaEventos {
     public static void main(String[] args) {
 
         Evento casamento = new Evento("Casamento","Igreja", LocalDateTime.of(2020, 10,1,7,30));
-        
+
         Duration faltaDias = Duration.between(LocalDateTime.now(), casamento.dataHora);
         long dias = faltaDias.toDays();
 

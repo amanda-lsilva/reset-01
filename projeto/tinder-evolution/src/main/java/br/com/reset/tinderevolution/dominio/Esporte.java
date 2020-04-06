@@ -7,6 +7,9 @@ public class Esporte {
     private String nome;
 
     // Construtor
+    public Esporte (){
+
+    }
     public Esporte(String nome) {
         this.nome = nome;
     }

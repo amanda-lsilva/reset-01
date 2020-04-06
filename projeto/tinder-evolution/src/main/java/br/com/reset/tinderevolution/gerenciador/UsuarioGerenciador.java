@@ -1,6 +1,8 @@
 package br.com.reset.tinderevolution.gerenciador;
 
+import br.com.reset.tinderevolution.acervo.BibliotecaMusical;
 import br.com.reset.tinderevolution.acervo.ListaUsuario;
+import br.com.reset.tinderevolution.dominio.Musica;
 import br.com.reset.tinderevolution.dominio.Usuario;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import java.util.List;
 public class UsuarioGerenciador {
 
     private ListaUsuario lista = new ListaUsuario();
+    private BibliotecaMusical biblioteca = new BibliotecaMusical();
 
     // Salvar Usuário
     public Usuario salvar(Usuario usuario) {
@@ -37,6 +40,7 @@ public class UsuarioGerenciador {
             return null;
         }
 
+        System.out.println("Usuário criado com sucesso!");
         return lista.salvar(usuario);
     }
 
@@ -48,15 +52,14 @@ public class UsuarioGerenciador {
         }
         // Validação idade maior que 18 anos.
         if (usuarioAtualizado.idadeAtual(usuarioAtualizado.getDataNascimento()) < 18) {
-        System.out.println("Somente para maiores de 18 anos.");
-        return null;
-    }
-    // Validação se todos os campos foram preenchidos
+            System.out.println("Somente para maiores de 18 anos.");
+            return null;
+        }
+        // Validação se todos os campos foram preenchidos
         if (usuarioAtualizado.getNome().isEmpty() || usuarioAtualizado.getEmail().isEmpty() || usuarioAtualizado.getTelefone().isEmpty() || usuarioAtualizado.getDataNascimento() == null || usuarioAtualizado.getBio().isEmpty() || usuarioAtualizado.getLongitude() == null || usuarioAtualizado.getLatitude() == null) {
-        System.out.println("Campos obrigatórios não informados.");
-        return null;
-    }
-        else {
+            System.out.println("Campos obrigatórios não informados.");
+            return null;
+        } else {
             return lista.editar(usuarioParaEditar, usuarioAtualizado);
         }
     }
@@ -80,5 +83,17 @@ public class UsuarioGerenciador {
             return lista.deletar(id);
         }
         return false;
+    }
+
+    public Usuario curtirMusica (int idMusica, int idUsuario){
+        Usuario usuarioCurtir = procurar(idUsuario);
+        Musica musicaCurtida = biblioteca.procurar(idMusica);
+        usuarioCurtir.salvarMusica(musicaCurtida);
+        return usuarioCurtir;
+    }
+
+    public List<Musica> listarMusica (int idUsuaio){
+        Usuario listaUsuario = procurar(idUsuaio);
+        return listaUsuario.listarMusicasCurtidas();
     }
 }

@@ -1,8 +1,11 @@
 package br.com.reset.tinderevolution.acervo;
 
+import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
+import br.com.reset.tinderevolution.dominio.EstiloMusical;
 import br.com.reset.tinderevolution.dominio.Musica;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +14,11 @@ import org.springframework.stereotype.Repository;
 public class BibliotecaMusical {
 
     private static int contador = 1;
-    private static final List<Musica> musicas = new ArrayList<>();
+    private static final List<Musica> musicas = new ArrayList<>(
+            Arrays.asList(
+                    new Musica(1, "Musica1", "Amanda", EstiloMusical.FUNK, LocalDate.of(2019, 10, 5))
+            )
+    );
 
     public Musica salvar(Musica musica) {
         musica.setId(contador++);

@@ -1,7 +1,11 @@
 package br.com.reset.tinderevolution.dominio;
 
+import br.com.reset.tinderevolution.gerenciador.UsuarioGerenciador;
+
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 
 // Cadastro de Usuário
 public class Usuario {
@@ -14,8 +18,21 @@ public class Usuario {
     private String bio;
     private Double latitude;
     private Double longitude;
+    private List<Musica> musicasCurtidas = new ArrayList<>();
 
     // Construtor
+
+//    public Usuario(int id, String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
+//        this.id = id;
+//        this.nome = nome;
+//        this.email = email;
+//        this.telefone = telefone;
+//        this.dataNascimento = dataNascimento;
+//        this.bio = bio;
+//        this.latitude = latitude;
+//        this.longitude = longitude;
+//    }
+
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
         this.email = email;
@@ -98,6 +115,15 @@ public class Usuario {
         return idade;
     }
 
+    // Adiciona músicas curtidas
+    public void salvarMusica(Musica musica) {
+        musicasCurtidas.add(musica);
+    }
+
+    public List<Musica> listarMusicasCurtidas() {
+        return musicasCurtidas;
+    }
+
     //toString
     @Override
     public String toString() {
@@ -110,7 +136,8 @@ public class Usuario {
                 ", bio='" + bio + '\'' +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
-                '}';
+                ", músicas curtidas=" + musicasCurtidas +
+                "}";
 
     }
 

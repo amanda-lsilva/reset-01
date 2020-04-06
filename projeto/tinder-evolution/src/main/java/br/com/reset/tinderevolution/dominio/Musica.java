@@ -12,6 +12,14 @@ public class Musica {
     private LocalDate lancamento;
 
     // Construtor
+    public Musica(int id, String nome, String artista, EstiloMusical estiloMusical, LocalDate lancamento) {
+        this.id = id;
+        this.nome = nome;
+        this.artista = artista;
+        this.estiloMusical = estiloMusical;
+        this.lancamento = lancamento;
+    }
+
     public Musica(String nome, String artista, EstiloMusical estiloMusical, LocalDate lancamento) {
         this.nome = nome;
         this.artista = artista;

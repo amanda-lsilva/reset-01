@@ -16,7 +16,9 @@ public class BibliotecaMusical {
     private static int contador = 1;
     private static final List<Musica> musicas = new ArrayList<>(
             Arrays.asList(
-                    new Musica(1, "Musica1", "Amanda", EstiloMusical.FUNK, LocalDate.of(2019, 10, 5))
+                    new Musica(1, "Musica1", "Amanda", EstiloMusical.FUNK, LocalDate.of(2019, 10, 5)),
+                    new Musica(2, "Música2", "Amanda", EstiloMusical.INDIE, LocalDate.of(2015,4,2)),
+                    new Musica(3, "Musica3", "Amanda",EstiloMusical.FUNK, LocalDate.of(1994,2,6))
             )
     );
 

@@ -1,7 +1,5 @@
 package br.com.reset.tinderevolution.dominio;
 
-import br.com.reset.tinderevolution.gerenciador.UsuarioGerenciador;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -19,19 +17,12 @@ public class Usuario {
     private Double latitude;
     private Double longitude;
     private List<Musica> musicasCurtidas = new ArrayList<>();
-
-    // Construtor
-
-//    public Usuario(int id, String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
-//        this.id = id;
-//        this.nome = nome;
-//        this.email = email;
-//        this.telefone = telefone;
-//        this.dataNascimento = dataNascimento;
-//        this.bio = bio;
-//        this.latitude = latitude;
-//        this.longitude = longitude;
-//    }
+    private List<Filme> filmesCurtidos = new ArrayList<>();
+    private List<Serie> seriesCurtidas = new ArrayList<>();
+    private List<Jogo> jogosCurtidos = new ArrayList<>();
+    private List<Esporte> esportesCurtidos = new ArrayList<>();
+    private List<Curiosidade> curiosidades = new ArrayList<>();
+    private List<Usuario> usuariosCurtidos = new ArrayList<>();
 
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
@@ -108,6 +99,36 @@ public class Usuario {
         this.longitude = longitude;
     }
 
+    public List<Musica> getMusicasCurtidas() {
+        return musicasCurtidas;
+    }
+
+    public List<Filme> getFilmesCurtidos() {
+        return filmesCurtidos;
+    }
+
+    public List<Serie> getSeriesCurtidas() {
+        return seriesCurtidas;
+    }
+
+    public List<Jogo> getJogosCurtidos() {
+        return jogosCurtidos;
+    }
+
+
+    public List<Esporte> getEsportesCurtidos() {
+        return esportesCurtidos;
+    }
+
+
+    public List<Curiosidade> getCuriosidades() {
+        return curiosidades;
+    }
+
+    public List<Usuario> getUsuariosCurtidos() {
+        return usuariosCurtidos;
+    }
+
     // Cálculo da Idade
     public double idadeAtual(LocalDate dataNascimento) {
         Period p = Period.between(dataNascimento, LocalDate.now());
@@ -120,8 +141,69 @@ public class Usuario {
         musicasCurtidas.add(musica);
     }
 
-    public List<Musica> listarMusicasCurtidas() {
-        return musicasCurtidas;
+    //Deleta música curtida
+    public void deletarMusica(Musica musica) {
+        musicasCurtidas.remove(musica);
+    }
+
+    // Adiciona filmes curtidos
+    public void salvarFilme(Filme filme) {
+        filmesCurtidos.add(filme);
+    }
+
+    //Deleta filme curtido
+    public void deletarFilme(Filme filme) {
+        filmesCurtidos.remove(filme);
+    }
+
+    // Adiciona séries curtidas
+    public void salvarSerie(Serie serie) {
+        seriesCurtidas.add(serie);
+    }
+
+    //Deleta música curtida
+    public void deletarSerie(Serie serie) {
+        seriesCurtidas.remove(serie);
+    }
+
+    // Adiciona jogos curtidos
+    public void salvarJogo(Jogo jogo) {
+        jogosCurtidos.add(jogo);
+    }
+
+    //Deleta jogo curtido
+    public void deletarJogo(Jogo jogo) {
+        jogosCurtidos.remove(jogo);
+    }
+
+    // Adiciona esportes curtidos
+    public void salvarEsporte(Esporte esporte) {
+        esportesCurtidos.add(esporte);
+    }
+
+    //Deleta esporte curtido
+    public void deletarEsporte(Esporte esporte) {
+        esportesCurtidos.remove(esporte);
+    }
+
+    // Adiciona curiosidades definidas
+    public void salvarCuriosidade(Curiosidade curiosidade) {
+        curiosidades.add(curiosidade);
+    }
+
+    //Deleta curiosidade definida
+    public void deletarCuriosidade(Curiosidade curiosidade) {
+        curiosidades.remove(curiosidade);
+    }
+
+    // Adiciona usuários curtidos
+    public void salvarUsuario(Usuario usuario) {
+        usuariosCurtidos.add(usuario);
+    }
+
+    //Deleta usuário curtido
+    public void deletarUsuario(Usuario usuario) {
+        usuariosCurtidos.remove(usuario);
     }
 
     //toString
@@ -137,8 +219,11 @@ public class Usuario {
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
                 ", músicas curtidas=" + musicasCurtidas +
+                ", filmes curtidos=" + filmesCurtidos +
+                ", séries curtidas=" + seriesCurtidas +
+                ", jogos curtidos=" + jogosCurtidos +
+                ", esportes curtidos=" + esportesCurtidos +
+                ", curiosidades definidas=" + curiosidades +
                 "}";
-
     }
-
 }

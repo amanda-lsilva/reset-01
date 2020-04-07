@@ -2,7 +2,6 @@ package br.com.reset.tinderevolution.gerenciador;
 
 import br.com.reset.tinderevolution.acervo.BibliotecaMusical;
 import br.com.reset.tinderevolution.acervo.ListaUsuario;
-import br.com.reset.tinderevolution.dominio.Musica;
 import br.com.reset.tinderevolution.dominio.Usuario;
 import org.springframework.stereotype.Service;
 
@@ -24,20 +23,20 @@ public class UsuarioGerenciador {
         for (Usuario emailExistente : usuarios) {
             if (usuario.getEmail().equals(emailExistente.getEmail())) {
                 System.out.println("Email já existente.");
-                return emailExistente;
+                throw new RuntimeException("Email já existente.");
             }
         }
 
         // Validação idade maior que 18 anos.
         if (usuario.idadeAtual(usuario.getDataNascimento()) < 18) {
             System.out.println("Somente para maiores de 18 anos.");
-            return null;
+            throw new RuntimeException("Somente para maiores de 18 anos.");
         }
 
         // Validação se todos os campos foram preenchidos
         if (usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getTelefone().isEmpty() || usuario.getDataNascimento() == null || usuario.getBio().isEmpty() || usuario.getLongitude() == null || usuario.getLatitude() == null) {
             System.out.println("Campos obrigatórios não informados.");
-            return null;
+            throw new RuntimeException("Campos obrigatórios não informados.");
         }
 
         System.out.println("Usuário criado com sucesso!");
@@ -53,12 +52,12 @@ public class UsuarioGerenciador {
         // Validação idade maior que 18 anos.
         if (usuarioAtualizado.idadeAtual(usuarioAtualizado.getDataNascimento()) < 18) {
             System.out.println("Somente para maiores de 18 anos.");
-            return null;
+            throw new RuntimeException("Somente para maiores de 18 anos.");
         }
         // Validação se todos os campos foram preenchidos
         if (usuarioAtualizado.getNome().isEmpty() || usuarioAtualizado.getEmail().isEmpty() || usuarioAtualizado.getTelefone().isEmpty() || usuarioAtualizado.getDataNascimento() == null || usuarioAtualizado.getBio().isEmpty() || usuarioAtualizado.getLongitude() == null || usuarioAtualizado.getLatitude() == null) {
             System.out.println("Campos obrigatórios não informados.");
-            return null;
+            throw new RuntimeException("Campos obrigatórios não informados.");
         } else {
             return lista.editar(usuarioParaEditar, usuarioAtualizado);
         }
@@ -83,17 +82,5 @@ public class UsuarioGerenciador {
             return lista.deletar(id);
         }
         return false;
-    }
-
-    public Usuario curtirMusica (int idMusica, int idUsuario){
-        Usuario usuarioCurtir = procurar(idUsuario);
-        Musica musicaCurtida = biblioteca.procurar(idMusica);
-        usuarioCurtir.salvarMusica(musicaCurtida);
-        return usuarioCurtir;
-    }
-
-    public List<Musica> listarMusica (int idUsuario){
-        Usuario listaUsuario = procurar(idUsuario);
-        return listaUsuario.listarMusicasCurtidas();
     }
 }

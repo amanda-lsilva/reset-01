@@ -121,7 +121,7 @@ public class Usuario {
     }
 
     public List<Musica> listarMusicasCurtidas() {
-        return musicasCurtidas;
+        return usuario + musicasCurtidas;
     }
 
     //toString

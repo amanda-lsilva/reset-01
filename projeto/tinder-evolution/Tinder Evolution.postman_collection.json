@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "640c8554-ed76-4f41-99d4-3e7ff604ce83",
+		"name": "Tinder Evolution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "ListarUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Amanda\",\r\n  \"email\": \"amanda@reset.com.br\",\r\n  \"telefone\": \"51 999999999\",\r\n  \"dataNascimento\": \"1991-10-15\",\r\n  \"bio\": \"bio\",\r\n  \"latitude\": 1,\r\n  \"longitude\": 1,\r\n  \"musicasCurtidas\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Jean\",\r\n  \"email\": \"jean@reset.com.br\",\r\n  \"telefone\": \"51 999999999\",\r\n  \"dataNascimento\": \"1990-08-31\",\r\n  \"bio\": \"bio\",\r\n  \"latitude\": 1,\r\n  \"longitude\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CurtirMusica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/likes/musica/1/avaliador/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"likes",
+								"musica",
+								"1",
+								"avaliador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarMusicasCurtidas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/likes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"likes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Musica",
+			"item": [
+				{
+					"name": "ListarMusica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/musicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"musicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarMusica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/musicas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"musicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarMusica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Litrão\",\r\n  \"artista\": \"Matheus e Kauan\",\r\n  \"lancamento\": \"2019-01-22\",\r\n  \"estiloMusical\": \"SERTANEJO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/musicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"musicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarMusica",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Litrão\",\r\n  \"artista\": \"Matheus e Kauan\",\r\n  \"lancamento\": \"2019-01-22\",\r\n  \"estiloMusical\": \"SERTANEJO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/musicas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"musicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarMusica",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/musicas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"musicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Filme",
+			"item": [
+				{
+					"name": "ListarFilme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/filmes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarFilme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/filmes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filmes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarFilme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Fight Club\",\r\n  \"diretor\": \"David Fincher\",\r\n  \"categoriaFilme\": \"DRAMA\",\r\n   \"lancamento\": \"1999-09-10\",\r\n  \"sinopse\": \"Um homem deprimido que sofre de insônia conhece um estranho vendedor chamado Tyler Durden e se vê morando em uma casa suja depois que seu perfeito apartamento é destruído. A dupla forma um clube com regras rígidas onde homens lutam. A parceria perfeita é comprometida quando uma mulher, Marla, atrai a atenção de Tyler.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/filmes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarFilme",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Fight Club\",\r\n  \"diretor\": \"David Fincher\",\r\n  \"sinopse\": \"Um homem deprimido que sofre de insônia conhece um estranho vendedor chamado Tyler Durden e se vê morando em uma casa suja depois que seu perfeito apartamento é destruído. A dupla forma um clube com regras rígidas onde homens lutam. A parceria perfeita é comprometida quando uma mulher, Marla, atrai a atenção de Tyler.\",\r\n  \"lancamento\": \"1999-09-10\",\r\n  \"categoria\": \"DRAMA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/filmes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filmes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarFilme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/filmes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filmes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Serie",
+			"item": [
+				{
+					"name": "ListarSerie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarSerie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/series/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarSerie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Brooklyn Nine-Nine\",\r\n  \"diretor\": \"Fremulon\",\r\n  \"categoriaSerie\": \"COMÉDIA\",\r\n  \"lancamento\": \"2013-09-17\",\r\n  \"sinopse\": \"Ambientada na 99ª Delegacia de Polícia de Nova York, no Brooklyn, a série acompanha as maluquices do imaturo detetive Jake Peralta e a relação que ele tem com o novo capitão, Ray Holt.\",\r\n  \"temporada\": \"1\",\r\n  \"episodio\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarSerie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Brooklyn Nine-Nine\",\r\n  \"diretor\": \"Fremulon\",\r\n  \"sinopse\": \"Ambientada na 99ª Delegacia de Polícia de Nova York, no Brooklyn, a série acompanha as maluquices do imaturo detetive Jake Peralta e a relação que ele tem com o novo capitão, Ray Holt.\",\r\n  \"lancamento\": \"2013-09-17\",\r\n  \"categoria\": \"COMEDIA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/series/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarSerie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/series/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogo",
+			"item": [
+				{
+					"name": "ListarJogo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarJogo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarJogo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Killer Instinct\",\r\n  \"publisher\": \"Rareware\",\r\n  \"categoriaJogo\": \"AÇÃO\",\r\n  \"lancamento\": \"1995-08-30\",\r\n  \"plataforma\": \"SNES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarJogo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Killer Instinct\",\r\n  \"publisher\": \"Rareware\",\r\n  \"lancamento\": \"1995-08-30\",\r\n  \"categoria\": \"LUTA\",\r\n  \"platafora\": \"SNES\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jogos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarJogo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jogos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jogos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Esporte",
+			"item": [
+				{
+					"name": "ListarEsporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/esportes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esportes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarEsporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/esportes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esportes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarEsporte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Volei\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/esportes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esportes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarEsporte",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Volei\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/esportes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esportes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarEsporte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/esportes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esportes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Curiosidade",
+			"item": [
+				{
+					"name": "ListarCuriosidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curiosidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curiosidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarCuriosidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curiosidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curiosidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CriarCuriosidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descricao\": \"Vegan\",\r\n  \"categoriaCuriosidade\": \"ALIMENTAÇÃO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/curiosidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curiosidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarCuriosidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Vegan\",\r\n  \"categoria\": \"ALIMENTACAO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/curiosidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curiosidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarCuriosidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curiosidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curiosidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -92,8 +92,8 @@ public class UsuarioGerenciador {
         return usuarioCurtir;
     }
 
-    public List<Musica> listarMusica (int idUsuaio){
-        Usuario listaUsuario = procurar(idUsuaio);
+    public List<Musica> listarMusica (int idUsuario){
+        Usuario listaUsuario = procurar(idUsuario);
         return listaUsuario.listarMusicasCurtidas();
     }
 }

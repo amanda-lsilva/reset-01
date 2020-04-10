@@ -111,48 +111,55 @@ Regras
 Usuário
 
 O e-mail não pode repetir
-
 O usuário deve ter mais de 18 anos de idade
-
 Todos os campos são obrigatórios
 
 Música
 
 Não pode existir duas músicas com o mesmo nome
-
 A data de lançamento não pode ser uma data futura
-
 Os estilos aceitos são { funk | pagode | rock | indie | sertanejo | metal }
-
 Todos os campos são obrigatórios
 
 Filme
+
 Não pode existir dois filmes com o mesmo nome
 A data de lançamento não pode ser uma data futura
 As categorias aceitas são { drama | comédia | suspense | terror | ação | musical }
 Todos os campos são obrigatórios
+
 Série
+
 Não pode existir duas séries com o mesmo nome
 A data de lançamento não pode ser uma data futura
 As categorias aceitas são { drama | comédia | suspense | terror | ação | sitcom }
 Deve possuir ao menos 1 temporada
 Deve possuir ao menos 1 episódio por temporada
 Todos os campos são obrigatórios
+
 Jogo
+
 Não pode existir dois jogos com o mesmo nome na mesma plataforma
 A data de lançamento não pode ser uma data futura
 As categorias aceitas são { drama | comédia | suspense | terror | ação | musical }
 As plataformas aceitas são { xbox | ps4 | pc | snes }
 Todos os campos, exceto publisher, são obrigatórios
+
 Esporte
+
 Não pode existir dois esportes com o mesmo nome
 Todos os campos são obrigatórios
+
 Curiosidade
+
 Não pode existir duas curiosidades com a mesma descrição
 As categorias aceitas são { comportamento | evento | aparência | alimentação }
 Todos os campos são obrigatórios
+
 Endpoints
+
 Usuários
+
 GET /usuarios (listar)
 GET /usuarios/{id} (pesquisar)
 POST /usuarios (cadastrar) *
@@ -169,7 +176,9 @@ DELETE /usuarios/{id} (deletar)
   "latitude": 1,
   "longitude": 1,
 }
+
 Músicas
+
 GET /musicas (listar)
 GET /musicas/{id} (pesquisar)
 POST /musicas (cadastrar) *
@@ -183,7 +192,9 @@ DELETE /musicas/{id} (deletar)
   "lancamento": "2019-01-22",
   "estiloMusical": "INDIE"
 }
+
 Filmes
+
 GET /filmes (listar)
 GET /filmes/{id} (pesquisar)
 POST /filmes (cadastrar) *
@@ -198,7 +209,9 @@ DELETE /filmes/{id} (deletar)
   "lancamento": "1999-09-10",
   "categoria": "DRAMA"
 }
+
 Séries
+
 GET /series (listar)
 GET /series/{id} (pesquisar)
 POST /series (cadastrar) *
@@ -213,7 +226,9 @@ DELETE /series/{id} (deletar)
   "lancamento": "2013-09-17",
   "categoria": "COMEDIA"
 }
+
 Jogos
+
 GET /jogos (listar)
 GET /jogos/{id} (pesquisar)
 POST /jogos (cadastrar) *
@@ -228,7 +243,9 @@ DELETE /jogos/{id} (deletar)
   "categoria": "LUTA",
   "platafora": "SNES"
 }
+
 Esportes
+
 GET /esportes (listar)
 GET /esportes/{id} (pesquisar)
 POST /esportes (cadastrar) *
@@ -239,7 +256,9 @@ DELETE /esportes/{id} (deletar)
 {
   "nome": "Volei"
 }
+
 Curiosidades
+
 GET /curiosidades (listar)
 GET /curiosidades/{id} (pesquisar)
 POST /curiosidades (cadastrar) *
@@ -253,41 +272,60 @@ DELETE /curiosidades/{id} (deletar)
 }
 
 Funcionalidades
+
 Foto
+
 Cadastrar foto de um usuário
+
 Curtidas
+
 Um usuário poderá curtir uma música
 Um usuário poderá curtir um filme
 Um usuário poderá curtir uma série
 Um usuário poderá curtir um jogo
 Um usuário poderá curtir um esporte
 Um usuário poderá definir uma curiosidade
+
 Listas
+
 Listar músicas curtidas de determinado usuário
 Listar filmes curtidos de determinado usuário
 Listar séries curtidas de determinado usuário
 Listar jogos curtidos de determinado usuário
 Listar esportes curtidos de determinado usuário
 Listar curiosidades determinado usuário
+
 Match
+
 Permitir que um usuário dê "like" em outro usuário
 Permitir que um usuário dê "dislike" em outro usuário
 Quando dois usuários derem "like" entre si, deverá ser criado um match
 Listar os matches de um determinado usuário (usuários que deram match entre si)
 Obter o usuário com mais características em comum que já não tenha um match ou dislike
+
 Regras
+
 Foto
+
 Adicionar um campo novo no usuário que será a url da foto do mesmo
 Deve ser possível cadastrar um usuário sem foto
 Ao listar os usuários, a foto deve ser retornada
+
 Avaliações
+
 Se um mesmo usuário curtir o mesmo item mais de uma vez, nada acontece
 O usuário poderá descurtir um item
+
 Listas
+
 Ao listar os usuários, devem ser retornados itens curtidos daquele usuário
+
 Curiosidade
+
 Pode existir duas curiosidades com a mesma descrição
+
 Endpoints
+
 Listas
 GET /usuarios
 GET /usuarios/{id}
@@ -306,6 +344,7 @@ GET /usuarios/{id}
   "esportesCurtidos": [],
   "curiosidades": []
 }
+
 Likes
 POST /likes/musica/{id-musica}/avaliador/{id-avaliador} (like música)
 
@@ -328,6 +367,7 @@ DELETE /likes/jogo/{id-jogo}/avaliador/{id-avaliador} (dislike jogo)
 DELETE /likes/esporte/{id-esporte}/avaliador/{id-avaliador} (dislike esporte)
 
 Match
+
 POST /matches/{id-avaliado}/avaliador/{id-avaliador}/like (like)
 POST /matches/{id-avaliado}/avaliador/{id-avaliador}/dislike (dislike)
 DELETE /matches/{id-avaliado}/avaliador/{id-avaliador}/like (desfazer like)

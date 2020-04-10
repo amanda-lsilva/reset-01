@@ -1,4 +1,5 @@
 Tinder Evolution
+
 Vamos construir uma aplicação como o Tinder, porém baseada em gostos em comum, incluindo músicas, filmes, séries, jogos, esportes, entre outros. Essa aplicação deverá ter as seguintes funcionalidades:
 
 Funcionalidades
@@ -22,6 +23,7 @@ Latitude
 Longitude
 
 Músicas
+
 Cadastrar música
 Listar música
 Pesquisar música
@@ -35,6 +37,7 @@ Data de Lançamento
 Estilo
 
 Filmes
+
 Cadastrar filme
 Listar filme
 Pesquisar filme
@@ -49,6 +52,7 @@ Categoria
 Sinopse
 
 Séries
+
 Cadastrar série
 Listar série
 Pesquisar série
@@ -63,7 +67,9 @@ Número de temporadas
 Número de episódios
 Categoria
 Sinopse
+
 Jogos
+
 Cadastrar jogo
 Listar jogo
 Pesquisar jogo
@@ -76,7 +82,9 @@ Publisher
 Data de Lançamento
 Categoria
 Plataforma
+
 Esportes
+
 Cadastrar esporte
 Listar esporte
 Pesquisar esporte
@@ -85,7 +93,9 @@ Editar esporte
 Dados de um esporte:
 Id
 Nome
+
 Curiosidades
+
 Cadastrar curiosidade
 Listar curiosidade
 Pesquisar curiosidade
@@ -95,16 +105,27 @@ Dados de uma curiosidade:
 Id
 Descrição
 Categoria
+
 Regras
+
 Usuário
+
 O e-mail não pode repetir
+
 O usuário deve ter mais de 18 anos de idade
+
 Todos os campos são obrigatórios
+
 Música
+
 Não pode existir duas músicas com o mesmo nome
+
 A data de lançamento não pode ser uma data futura
+
 Os estilos aceitos são { funk | pagode | rock | indie | sertanejo | metal }
+
 Todos os campos são obrigatórios
+
 Filme
 Não pode existir dois filmes com o mesmo nome
 A data de lançamento não pode ser uma data futura

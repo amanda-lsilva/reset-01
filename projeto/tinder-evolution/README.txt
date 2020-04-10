@@ -1,34 +1,34 @@
 Tinder Evolution
-Vamos construir uma aplicaÁ„o como o Tinder, porÈm baseada em gostos em comum, incluindo m˙sicas, filmes, sÈries, jogos, esportes, entre outros. Essa aplicaÁ„o dever· ter as seguintes funcionalidades:
+Vamos construir uma aplica√ß√£o como o Tinder, por√©m baseada em gostos em comum, incluindo m√∫sicas, filmes, s√©ries, jogos, esportes, entre outros. Essa aplica√ß√£o dever√° ter as seguintes funcionalidades:
 
 Funcionalidades
-Usu·rio
-Cadastrar usu·rio
-Listar usu·rio
-Pesquisar usu·rio
-Deletar usu·rio
-Editar usu·rio
-Dados de um usu·rio:
+Usu√°rio
+Cadastrar usu√°rio
+Listar usu√°rio
+Pesquisar usu√°rio
+Deletar usu√°rio
+Editar usu√°rio
+Dados de um usu√°rio:
 Id
 Nome
 Email
 Telefone
 Data de Nascimento
 Bio
-LocalizaÁ„o:
+Localiza√ß√£o:
 Latitude
 Longitude
-M˙sicas
-Cadastrar m˙sica
-Listar m˙sica
-Pesquisar m˙sica
-Deletar m˙sica
-Editar m˙sica
-Dados de uma m˙sica:
+M√∫sicas
+Cadastrar m√∫sica
+Listar m√∫sica
+Pesquisar m√∫sica
+Deletar m√∫sica
+Editar m√∫sica
+Dados de uma m√∫sica:
 Id
 Nome
 Autor
-Data de LanÁamento
+Data de Lan√ßamento
 Estilo
 Filmes
 Cadastrar filme
@@ -40,22 +40,22 @@ Dados de um filme:
 Id
 Nome
 Diretor
-Data de LanÁamento
+Data de Lan√ßamento
 Categoria
 Sinopse
-SÈries
-Cadastrar sÈrie
-Listar sÈrie
-Pesquisar sÈrie
-Deletar sÈrie
-Editar sÈrie
-Dados de uma sÈrie:
+S√©ries
+Cadastrar s√©rie
+Listar s√©rie
+Pesquisar s√©rie
+Deletar s√©rie
+Editar s√©rie
+Dados de uma s√©rie:
 Id
 Nome
 Diretor
-Data de LanÁamento
-N˙mero de temporadas
-N˙mero de episÛdios
+Data de Lan√ßamento
+N√∫mero de temporadas
+N√∫mero de epis√≥dios
 Categoria
 Sinopse
 Jogos
@@ -68,7 +68,7 @@ Dados de um jogo:
 Id
 Nome
 Publisher
-Data de LanÁamento
+Data de Lan√ßamento
 Categoria
 Plataforma
 Esportes
@@ -88,40 +88,223 @@ Deletar curiosidade
 Editar curiosidade
 Dados de uma curiosidade:
 Id
-DescriÁ„o
+Descri√ß√£o
 Categoria
 Regras
-Usu·rio
-O e-mail n„o pode repetir
-O usu·rio deve ter mais de 18 anos de idade
-Todos os campos s„o obrigatÛrios
-M˙sica
-N„o pode existir duas m˙sicas com o mesmo nome
-A data de lanÁamento n„o pode ser uma data futura
-Os estilos aceitos s„o { funk | pagode | rock | indie | sertanejo | metal }
-Todos os campos s„o obrigatÛrios
+Usu√°rio
+O e-mail n√£o pode repetir
+O usu√°rio deve ter mais de 18 anos de idade
+Todos os campos s√£o obrigat√≥rios
+M√∫sica
+N√£o pode existir duas m√∫sicas com o mesmo nome
+A data de lan√ßamento n√£o pode ser uma data futura
+Os estilos aceitos s√£o { funk | pagode | rock | indie | sertanejo | metal }
+Todos os campos s√£o obrigat√≥rios
 Filme
-N„o pode existir dois filmes com o mesmo nome
-A data de lanÁamento n„o pode ser uma data futura
-As categorias aceitas s„o { drama | comÈdia | suspense | terror | aÁ„o | musical }
-Todos os campos s„o obrigatÛrios
-SÈrie
-N„o pode existir duas sÈries com o mesmo nome
-A data de lanÁamento n„o pode ser uma data futura
-As categorias aceitas s„o { drama | comÈdia | suspense | terror | aÁ„o | sitcom }
+N√£o pode existir dois filmes com o mesmo nome
+A data de lan√ßamento n√£o pode ser uma data futura
+As categorias aceitas s√£o { drama | com√©dia | suspense | terror | a√ß√£o | musical }
+Todos os campos s√£o obrigat√≥rios
+S√©rie
+N√£o pode existir duas s√©ries com o mesmo nome
+A data de lan√ßamento n√£o pode ser uma data futura
+As categorias aceitas s√£o { drama | com√©dia | suspense | terror | a√ß√£o | sitcom }
 Deve possuir ao menos 1 temporada
-Deve possuir ao menos 1 episÛdio por temporada
-Todos os campos s„o obrigatÛrios
+Deve possuir ao menos 1 epis√≥dio por temporada
+Todos os campos s√£o obrigat√≥rios
 Jogo
-N„o pode existir dois jogos com o mesmo nome na mesma plataforma
-A data de lanÁamento n„o pode ser uma data futura
-As categorias aceitas s„o { drama | comÈdia | suspense | terror | aÁ„o | musical }
-As plataformas aceitas s„o { xbox | ps4 | pc | snes }
-Todos os campos, exceto publisher, s„o obrigatÛrios
+N√£o pode existir dois jogos com o mesmo nome na mesma plataforma
+A data de lan√ßamento n√£o pode ser uma data futura
+As categorias aceitas s√£o { drama | com√©dia | suspense | terror | a√ß√£o | musical }
+As plataformas aceitas s√£o { xbox | ps4 | pc | snes }
+Todos os campos, exceto publisher, s√£o obrigat√≥rios
 Esporte
-N„o pode existir dois esportes com o mesmo nome
-Todos os campos s„o obrigatÛrios
+N√£o pode existir dois esportes com o mesmo nome
+Todos os campos s√£o obrigat√≥rios
 Curiosidade
-N„o pode existir duas curiosidades com a mesma descriÁ„o
-As categorias aceitas s„o { comportamento | evento | aparÍncia | alimentaÁ„o }
-Todos os campos s„o obrigatÛrios
+N√£o pode existir duas curiosidades com a mesma descri√ß√£o
+As categorias aceitas s√£o { comportamento | evento | apar√™ncia | alimenta√ß√£o }
+Todos os campos s√£o obrigat√≥rios
+Endpoints
+Usu√°rios
+GET /usuarios (listar)
+GET /usuarios/{id} (pesquisar)
+POST /usuarios (cadastrar) *
+PUT /usuarios/{id} (editar) *
+DELETE /usuarios/{id} (deletar)
+* payload
+
+{
+  "nome": "Robson Rosa",
+  "email": "robsonrosa@cwi.com.br",
+  "telefone": "51981938496",
+  "dataNascimento": "2020-02-15",
+  "bio": "bio",
+  "latitude": 1,
+  "longitude": 1,
+}
+M√∫sicas
+GET /musicas (listar)
+GET /musicas/{id} (pesquisar)
+POST /musicas (cadastrar) *
+PUT /musicas/{id} (editar) *
+DELETE /musicas/{id} (deletar)
+* payload
+
+{
+  "nome": "Chlorine",
+  "artista": "Twenty One Pilots",
+  "lancamento": "2019-01-22",
+  "estiloMusical": "INDIE"
+}
+Filmes
+GET /filmes (listar)
+GET /filmes/{id} (pesquisar)
+POST /filmes (cadastrar) *
+PUT /filmes/{id} (editar) *
+DELETE /filmes/{id} (deletar)
+* payload
+
+{
+  "nome": "Fight Club",
+  "diretor": "David Fincher",
+  "sinopse": "Um homem deprimido que sofre de ins√¥nia conhece um estranho vendedor chamado Tyler Durden e se v√™ morando em uma casa suja depois que seu perfeito apartamento √© destru√≠do. A dupla forma um clube com regras r√≠gidas onde homens lutam. A parceria perfeita √© comprometida quando uma mulher, Marla, atrai a aten√ß√£o de Tyler.",
+  "lancamento": "1999-09-10",
+  "categoria": "DRAMA"
+}
+S√©ries
+GET /series (listar)
+GET /series/{id} (pesquisar)
+POST /series (cadastrar) *
+PUT /series/{id} (editar) *
+DELETE /series/{id} (deletar)
+* payload
+
+{
+  "nome": "Brooklyn Nine-Nine",
+  "diretor": "Fremulon",
+  "sinopse": "Ambientada na 99¬™ Delegacia de Pol√≠cia de Nova York, no Brooklyn, a s√©rie acompanha as maluquices do imaturo detetive Jake Peralta e a rela√ß√£o que ele tem com o novo capit√£o, Ray Holt.",
+  "lancamento": "2013-09-17",
+  "categoria": "COMEDIA"
+}
+Jogos
+GET /jogos (listar)
+GET /jogos/{id} (pesquisar)
+POST /jogos (cadastrar) *
+PUT /jogos/{id} (editar) *
+DELETE /jogos/{id} (deletar)
+* payload
+
+{
+  "nome": "Killer Instinct",
+  "publisher": "Rareware",
+  "lancamento": "1995-08-30",
+  "categoria": "LUTA",
+  "platafora": "SNES"
+}
+Esportes
+GET /esportes (listar)
+GET /esportes/{id} (pesquisar)
+POST /esportes (cadastrar) *
+PUT /esportes/{id} (editar) *
+DELETE /esportes/{id} (deletar)
+* payload
+
+{
+  "nome": "Volei"
+}
+Curiosidades
+GET /curiosidades (listar)
+GET /curiosidades/{id} (pesquisar)
+POST /curiosidades (cadastrar) *
+PUT /curiosidades/{id} (editar) *
+DELETE /curiosidades/{id} (deletar)
+* payload
+
+{
+  "nome": "Vegan",
+  "categoria": "ALIMENTACAO"
+}
+
+Funcionalidades
+Foto
+Cadastrar foto de um usu√°rio
+Curtidas
+Um usu√°rio poder√° curtir uma m√∫sica
+Um usu√°rio poder√° curtir um filme
+Um usu√°rio poder√° curtir uma s√©rie
+Um usu√°rio poder√° curtir um jogo
+Um usu√°rio poder√° curtir um esporte
+Um usu√°rio poder√° definir uma curiosidade
+Listas
+Listar m√∫sicas curtidas de determinado usu√°rio
+Listar filmes curtidos de determinado usu√°rio
+Listar s√©ries curtidas de determinado usu√°rio
+Listar jogos curtidos de determinado usu√°rio
+Listar esportes curtidos de determinado usu√°rio
+Listar curiosidades determinado usu√°rio
+Match
+Permitir que um usu√°rio d√™ "like" em outro usu√°rio
+Permitir que um usu√°rio d√™ "dislike" em outro usu√°rio
+Quando dois usu√°rios derem "like" entre si, dever√° ser criado um match
+Listar os matches de um determinado usu√°rio (usu√°rios que deram match entre si)
+Obter o usu√°rio com mais caracter√≠sticas em comum que j√° n√£o tenha um match ou dislike
+Regras
+Foto
+Adicionar um campo novo no usu√°rio que ser√° a url da foto do mesmo
+Deve ser poss√≠vel cadastrar um usu√°rio sem foto
+Ao listar os usu√°rios, a foto deve ser retornada
+Avalia√ß√µes
+Se um mesmo usu√°rio curtir o mesmo item mais de uma vez, nada acontece
+O usu√°rio poder√° descurtir um item
+Listas
+Ao listar os usu√°rios, devem ser retornados itens curtidos daquele usu√°rio
+Curiosidade
+Pode existir duas curiosidades com a mesma descri√ß√£o
+Endpoints
+Listas
+GET /usuarios
+GET /usuarios/{id}
+{
+  "nome": "Robson Rosa",
+  "email": "robsonrosa@cwi.com.br",
+  "telefone": "51981938496",
+  "dataNascimento": "2020-02-15",
+  "bio": "bio",
+  "latitude": 1,
+  "longitude": 1,
+  "musicasCurtidas": [],
+  "filmesCurtidos": [],
+  "seriesCurtidas": [],
+  "jogosCurtidos": [],
+  "esportesCurtidos": [],
+  "curiosidades": []
+}
+Likes
+POST /likes/musica/{id-musica}/avaliador/{id-avaliador} (like m√∫sica)
+
+POST /likes/filme/{id-filme}/avaliador/{id-avaliador} (like filme)
+
+POST /likes/serie/{id-serie}/avaliador/{id-avaliador} (like s√©rie)
+
+POST /likes/jogo/{id-jogo}/avaliador/{id-avaliador} (like jogo)
+
+POST /likes/esporte/{id-esporte}/avaliador/{id-avaliador} (like esporte)
+
+DELETE /likes/musica/{id-musica}/avaliador/{id-avaliador} (dislike m√∫sica)
+
+DELETE /likes/filme/{id-filme}/avaliador/{id-avaliador} (dislike filme)
+
+DELETE /likes/serie/{id-serie}/avaliador/{id-avaliador} (dislike s√©rie)
+
+DELETE /likes/jogo/{id-jogo}/avaliador/{id-avaliador} (dislike jogo)
+
+DELETE /likes/esporte/{id-esporte}/avaliador/{id-avaliador} (dislike esporte)
+
+Match
+POST /matches/{id-avaliado}/avaliador/{id-avaliador}/like (like)
+POST /matches/{id-avaliado}/avaliador/{id-avaliador}/dislike (dislike)
+DELETE /matches/{id-avaliado}/avaliador/{id-avaliador}/like (desfazer like)
+DELETE /matches/{id-avaliado}/avaliador/{id-avaliador}/dislike (desfazer dislike)
+GET /matches/{id} (listar matches)
+GET /matches/{id}/best (mais caracter√≠sticas em comum)

@@ -2,7 +2,9 @@ Tinder Evolution
 Vamos construir uma aplicação como o Tinder, porém baseada em gostos em comum, incluindo músicas, filmes, séries, jogos, esportes, entre outros. Essa aplicação deverá ter as seguintes funcionalidades:
 
 Funcionalidades
+
 Usuário
+
 Cadastrar usuário
 Listar usuário
 Pesquisar usuário
@@ -18,6 +20,7 @@ Bio
 Localização:
 Latitude
 Longitude
+
 Músicas
 Cadastrar música
 Listar música
@@ -30,6 +33,7 @@ Nome
 Autor
 Data de Lançamento
 Estilo
+
 Filmes
 Cadastrar filme
 Listar filme
@@ -43,6 +47,7 @@ Diretor
 Data de Lançamento
 Categoria
 Sinopse
+
 Séries
 Cadastrar série
 Listar série

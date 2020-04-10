@@ -2,6 +2,7 @@ package br.com.reset.tinderevolution.controller;
 
 import br.com.reset.tinderevolution.dominio.*;
 import br.com.reset.tinderevolution.gerenciador.LikeDislike;
+import br.com.reset.tinderevolution.gerenciador.Matches;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,7 @@ public class LikesDislikesController {
 
     @Autowired
     private LikeDislike gerenciadorLikeDislike;
+    private Matches gerenciadorMatches;
 
     //Musica
     @GetMapping ("/musica/{id-usuario}")
@@ -92,5 +94,11 @@ public class LikesDislikesController {
     @DeleteMapping("/esporte/{id-esporte}/avaliador/{id-avaliador}")
     public Usuario descurtirEsporte(@PathVariable("id-esporte") int id, @PathVariable("id-avaliador") int idAvaliador){
         return gerenciadorLikeDislike.descurtirEsporte(id, idAvaliador);
+    }
+
+    //Usuario
+    @GetMapping ("{id-usuario}")
+    public List<Usuario> listarUsuariosCurtidos(@PathVariable("id-usuario") int id) {
+        return gerenciadorMatches.listarLikes(id);
     }
 }

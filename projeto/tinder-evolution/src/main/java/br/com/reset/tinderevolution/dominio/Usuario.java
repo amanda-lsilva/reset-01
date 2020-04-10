@@ -16,6 +16,7 @@ public class Usuario {
     private String bio;
     private Double latitude;
     private Double longitude;
+    private String foto;
     private List<Musica> musicasCurtidas = new ArrayList<>();
     private List<Filme> filmesCurtidos = new ArrayList<>();
     private List<Serie> seriesCurtidas = new ArrayList<>();
@@ -23,6 +24,7 @@ public class Usuario {
     private List<Esporte> esportesCurtidos = new ArrayList<>();
     private List<Curiosidade> curiosidades = new ArrayList<>();
     private List<Usuario> usuariosCurtidos = new ArrayList<>();
+    private List<Usuario> matches = new ArrayList<>();
 
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
@@ -99,6 +101,14 @@ public class Usuario {
         this.longitude = longitude;
     }
 
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
     public List<Musica> getMusicasCurtidas() {
         return musicasCurtidas;
     }
@@ -123,10 +133,6 @@ public class Usuario {
 
     public List<Curiosidade> getCuriosidades() {
         return curiosidades;
-    }
-
-    public List<Usuario> getUsuariosCurtidos() {
-        return usuariosCurtidos;
     }
 
     // Cálculo da Idade
@@ -201,9 +207,24 @@ public class Usuario {
         usuariosCurtidos.add(usuario);
     }
 
-    //Deleta usuário curtido
-    public void deletarUsuario(Usuario usuario) {
-        usuariosCurtidos.remove(usuario);
+    //Adiciona Match
+    public void salvarMatch(Usuario usuarioLike) {
+        for (Usuario usuario : usuarioLike.usuariosCurtidos) {
+            if (usuario.getId() == this.id) {
+                matches.add(usuarioLike);
+                usuarioLike.matches.add(usuario);
+            }
+        }
+    }
+
+    //Lista matches
+    public List<Usuario> listarMatches() {
+        return matches;
+    }
+
+    //Lista usuários curtidos
+    public List<Usuario> listarUsuariosCurtidos() {
+        return usuariosCurtidos;
     }
 
     //toString

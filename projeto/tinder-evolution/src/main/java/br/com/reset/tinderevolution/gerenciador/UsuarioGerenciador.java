@@ -27,7 +27,7 @@ public class UsuarioGerenciador {
             }
         }
 
-        // Validação idade maior que 18 anos.
+        // Validação idade maiorque 18 anos.
         if (usuario.idadeAtual(usuario.getDataNascimento()) < 18) {
             System.out.println("Somente para maiores de 18 anos.");
             throw new RuntimeException("Somente para maiores de 18 anos.");

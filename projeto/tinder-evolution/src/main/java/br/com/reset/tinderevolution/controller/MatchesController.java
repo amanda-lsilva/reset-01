@@ -20,7 +20,7 @@ public class MatchesController {
     //Listar Matches
     @GetMapping("{id-usuario}")
     public List<Usuario> listarMatches(@PathVariable("id-usuario") int id) {
-        return gerenciadorMatches.listarMatches(id);
+        return gerenciadorMatches.listarMatchesUsuario(id);
     }
 
     @PostMapping("/{id-avaliado}/avaliador/{id-avaliador}")

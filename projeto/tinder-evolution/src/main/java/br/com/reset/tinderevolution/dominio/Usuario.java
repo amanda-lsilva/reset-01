@@ -25,6 +25,7 @@ public class Usuario {
     private List<Curiosidade> curiosidades = new ArrayList<>();
     private List<Usuario> usuariosCurtidos = new ArrayList<>();
     private List<Usuario> matches = new ArrayList<>();
+    private List<Usuario> best = new ArrayList<>();
 
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
@@ -213,6 +214,15 @@ public class Usuario {
             if (usuario.getId() == this.id) {
                 matches.add(usuarioLike);
                 usuarioLike.matches.add(usuario);
+            }
+        }
+    }
+
+    //Adiciona Lista Best
+    public void salvarBest(Usuario usuarioBest) {
+        for (Usuario usuario : usuarioBest.matches) {
+            if (usuario.getId() != usuarioBest.getId()) {
+                best.add(usuarioBest);
             }
         }
     }

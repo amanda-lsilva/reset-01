@@ -1,6 +1,7 @@
 package br.com.reset.tinderevolution.gerenciador;
 
 import br.com.reset.tinderevolution.dominio.Musica;
+import br.com.reset.tinderevolution.dominio.Serie;
 import br.com.reset.tinderevolution.dominio.Usuario;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,11 @@ import java.util.List;
 public class Matches {
 
     UsuarioGerenciador usuarioGerenciador = new UsuarioGerenciador();
+    int contadorMusica;
+    int contadorFilme;
+    int contadorSerie;
+    int contadorJogo;
+    int contadorEsporte;
 
     //Curtir Usuário
     public Usuario likeUsuario(int idUsuarioLike, int idUsuario) {
@@ -66,4 +72,41 @@ public class Matches {
         Usuario listaUsuario = usuarioGerenciador.procurar(id);
         return listaUsuario.listarMatches();
     }
+
+    public int criarBest(int id, int idBest) {
+        Usuario usuario = usuarioGerenciador.procurar(id);
+        Usuario usuarioBest = usuarioGerenciador.procurar(idBest);
+        if (usuarioBest.getMusicasCurtidas() == usuario.getMusicasCurtidas()) {
+            contadorMusica++;
+        }
+        if (usuarioBest.getFilmesCurtidos() == usuario.getFilmesCurtidos()) {
+            contadorFilme++;
+        }
+        if (usuarioBest.getSeriesCurtidas() == usuario.getSeriesCurtidas()) {
+            contadorSerie++;
+        }
+        if (usuarioBest.getJogosCurtidos() == usuario.getJogosCurtidos()) {
+            contadorJogo++;
+        }
+        if (usuarioBest.getEsportesCurtidos() == usuario.getEsportesCurtidos()) {
+            contadorEsporte++;
+        }
+        int pontuacao = contadorMusica + contadorFilme + contadorSerie + contadorJogo + contadorEsporte;
+        usuario.salvarBest(usuarioBest);
+        return pontuacao;
+    }
+
+//    //Ordenar lista best
+//    public int compareTo (Usuario usuarioBest){
+//        if ( < outra.saldo) {
+//            return -1;
+//        }
+//
+//        if (this.saldo > outra.saldo) {
+//            return 1;
+//        }
+//
+//        return 0;
+//    }
 }
+

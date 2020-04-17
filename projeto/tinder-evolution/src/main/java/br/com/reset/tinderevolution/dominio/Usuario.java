@@ -237,6 +237,11 @@ public class Usuario {
         return usuariosCurtidos;
     }
 
+    //Lista best
+    public List<Usuario> listarUsuarioBest(){
+        return best;
+    }
+
     //toString
     @Override
     public String toString() {

@@ -25,6 +25,7 @@ public class Usuario {
     private List<Curiosidade> curiosidades = new ArrayList<>();
     private List<Usuario> usuariosCurtidos = new ArrayList<>();
     private List<Usuario> matches = new ArrayList<>();
+    private List<Usuario> dislike = new ArrayList<>();
 
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
@@ -215,6 +216,16 @@ public class Usuario {
                 usuarioLike.matches.add(usuario);
             }
         }
+    }
+
+    //Adiciona Dislike
+    public void salvarDislike (Usuario usuario){
+        dislike.add(usuario);
+    }
+
+    //Lista Dislike
+    public List<Usuario> listarDislikes(){
+        return dislike;
     }
 
     //Lista matches

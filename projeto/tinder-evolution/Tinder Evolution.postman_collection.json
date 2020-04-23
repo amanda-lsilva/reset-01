@@ -395,7 +395,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/matches/1/avaliador/2",
+									"raw": "http://localhost:8080/matches/2/avaliador/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -403,9 +403,9 @@
 									"port": "8080",
 									"path": [
 										"matches",
-										"1",
+										"2",
 										"avaliador",
-										"2"
+										"1"
 									]
 								}
 							},
@@ -417,7 +417,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/matches/3/avaliador/1",
+									"raw": "http://localhost:8080/matches/2/avaliador/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -425,7 +425,7 @@
 									"port": "8080",
 									"path": [
 										"matches",
-										"3",
+										"2",
 										"avaliador",
 										"1"
 									]
@@ -447,26 +447,6 @@
 									"port": "8080",
 									"path": [
 										"matches",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ListarLikes",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/likes/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"likes",
 										"1"
 									]
 								}
@@ -544,7 +524,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Maria\",\r\n  \"email\": \"maria@reset.com.br\",\r\n  \"telefone\": \"51 995118960\",\r\n  \"dataNascimento\": \"1991-10-15\",\r\n  \"bio\": \"bio\",\r\n  \"latitude\": 1,\r\n  \"longitude\": 1,\r\n  \"foto\": \"https://img2.gratispng.com/20180627/hc/kisspng-drawing-camera-photography-coloring-book-video-camera-5b335b885c07f3.599516561530092424377.jpg\"\r\n }",
+							"raw": "{\r\n  \"nome\": \"Amanda\",\r\n  \"email\": \"amanda@reset.com.br\",\r\n  \"telefone\": \"51 995118960\",\r\n  \"dataNascimento\": \"1991-10-15\",\r\n  \"bio\": \"bio\",\r\n  \"latitude\": 1,\r\n  \"longitude\": 1,\r\n  \"foto\": \"https://img2.gratispng.com/20180627/hc/kisspng-drawing-camera-photography-coloring-book-video-camera-5b335b885c07f3.599516561530092424377.jpg\"\r\n }",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -22,7 +22,16 @@ public class LikeDislikeGerenciador {
     public Usuario curtirMusica(int idMusica, int idUsuario) {
         Usuario usuarioCurtirMusica = gerenciadorUsuario.procurar(idUsuario);
         Musica musicaCurtida = bibliotecaMusical.procurar(idMusica);
-        usuarioCurtirMusica.salvarMusica(musicaCurtida);
+        boolean validaMusica = false;
+        for (Musica musica : usuarioCurtirMusica.getMusicasCurtidas()) {
+            if (musicaCurtida.getId() == musica.getId()) {
+                validaMusica = true;
+                break;
+            }
+        }
+        if (validaMusica == false) {
+            usuarioCurtirMusica.salvarMusica(musicaCurtida);
+        }
         return usuarioCurtirMusica;
     }
 
@@ -48,7 +57,16 @@ public class LikeDislikeGerenciador {
     public Usuario curtirFilme(int idFilme, int idUsuario) {
         Usuario usuarioCurtirFilme = gerenciadorUsuario.procurar(idUsuario);
         Filme filmeCurtido = repositorioFilme.procurar(idFilme);
-        usuarioCurtirFilme.salvarFilme(filmeCurtido);
+        boolean validaFilme = false;
+        for (Filme filme : usuarioCurtirFilme.getFilmesCurtidos()) {
+            if (filmeCurtido.getId() == filme.getId()) {
+                validaFilme = true;
+                break;
+            }
+        }
+        if (validaFilme == false) {
+            usuarioCurtirFilme.salvarFilme(filmeCurtido);
+        }
         return usuarioCurtirFilme;
     }
 
@@ -74,7 +92,16 @@ public class LikeDislikeGerenciador {
     public Usuario curtirSerie(int idSerie, int idUsuario) {
         Usuario usuarioCurtirSerie = gerenciadorUsuario.procurar(idUsuario);
         Serie serieCurtida = repositorioSerie.procurar(idSerie);
-        usuarioCurtirSerie.salvarSerie(serieCurtida);
+        boolean validaSerie = false;
+        for(Serie serie : usuarioCurtirSerie.getSeriesCurtidas()){
+            if(serieCurtida.getId() == serie.getId()){
+                validaSerie = true;
+                break;
+            }
+        }
+        if (validaSerie == false){
+            usuarioCurtirSerie.salvarSerie(serieCurtida);
+        }
         return usuarioCurtirSerie;
     }
 
@@ -99,8 +126,17 @@ public class LikeDislikeGerenciador {
     //Curtir jogo
     public Usuario curtirJogo(int idJogo, int idUsuario) {
         Usuario usuarioCurtirJogo = gerenciadorUsuario.procurar(idUsuario);
-        Jogo jogoCurtida = acervoJogo.procurar(idJogo);
-        usuarioCurtirJogo.salvarJogo(jogoCurtida);
+        Jogo jogoCurtido = acervoJogo.procurar(idJogo);
+        boolean validaJogo = false;
+        for (Jogo jogo : usuarioCurtirJogo.getJogosCurtidos()) {
+            if (jogoCurtido.getId() == jogo.getId()) {
+                validaJogo = true;
+                break;
+            }
+        }
+        if (validaJogo == false) {
+            usuarioCurtirJogo.salvarJogo(jogoCurtido);
+        }
         return usuarioCurtirJogo;
     }
 
@@ -126,7 +162,16 @@ public class LikeDislikeGerenciador {
     public Usuario curtirEsporte(int idEsporte, int idUsuario) {
         Usuario usuarioCurtirEsporte = gerenciadorUsuario.procurar(idUsuario);
         Esporte esporteCurtido = listaEsporte.procurar(idEsporte);
-        usuarioCurtirEsporte.salvarEsporte(esporteCurtido);
+        boolean validaEsporte = false;
+        for (Esporte esporte : usuarioCurtirEsporte.getEsportesCurtidos()) {
+            if (esporteCurtido.getId() == esporte.getId()) {
+                validaEsporte = true;
+                break;
+            }
+        }
+        if (validaEsporte == false) {
+            usuarioCurtirEsporte.salvarEsporte(esporteCurtido);
+        }
         return usuarioCurtirEsporte;
     }
 
@@ -151,8 +196,17 @@ public class LikeDislikeGerenciador {
     //Definir Curiosidade
     public Usuario definirCuriosidade(int idCuriosidade, int idUsuario) {
         Usuario usuarioCurtirCuriosidade = gerenciadorUsuario.procurar(idUsuario);
-        Curiosidade CuriosidadeDefinida = acervoCuriosidade.procurar(idCuriosidade);
-        usuarioCurtirCuriosidade.salvarCuriosidade(CuriosidadeDefinida);
+        Curiosidade curiosidadeDefinida = acervoCuriosidade.procurar(idCuriosidade);
+        boolean validaCuriosidade = false;
+        for (Curiosidade curiosidade : usuarioCurtirCuriosidade.getCuriosidades()) {
+            if (curiosidadeDefinida.getId() == curiosidade.getId()) {
+                validaCuriosidade = true;
+                break;
+            }
+        }
+        if (validaCuriosidade == false) {
+            usuarioCurtirCuriosidade.salvarCuriosidade(curiosidadeDefinida);
+        }
         return usuarioCurtirCuriosidade;
     }
 

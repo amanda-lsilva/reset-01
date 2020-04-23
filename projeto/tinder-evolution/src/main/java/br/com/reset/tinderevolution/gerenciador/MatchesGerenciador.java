@@ -50,7 +50,8 @@ public class MatchesGerenciador {
                 i.remove();
             }
         }
-        throw new RuntimeException("Usuário não havia curtido esse usuário");
+        usuario.salvarDislike(usuarioMatch);
+        return usuario;
     }
 
     //Listar likes por usuário
@@ -73,59 +74,71 @@ public class MatchesGerenciador {
             if (usuarioBestAtual.getId() == usuario.getId()) {
                 continue;
             }
+            boolean usuarioDeuMatch = false;
             for (Usuario usuarioAtualMatch : usuario.listarMatches()) {
                 if (usuarioBestAtual.getId() == usuarioAtualMatch.getId()) {
-                    continue;
+                    usuarioDeuMatch = true;
+                    break;
                 }
-                int contadorMusica = 0;
-                int contadorFilme = 0;
-                int contadorSerie = 0;
-                int contadorJogo = 0;
-                int contadorEsporte = 0;
-                for (Musica musicaCurtida : usuario.getMusicasCurtidas()) {
-                    for (Musica musicaDoBest : usuarioBestAtual.getMusicasCurtidas()) {
-                        if (musicaDoBest.getId() == musicaCurtida.getId()) {
-                            contadorMusica++;
-                        }
+            }
+            boolean usuarioDislike = false;
+            for (Usuario usuarioAtual : usuario.listarDislikes()){
+                if (usuarioBestAtual.getId() == usuarioAtual.getId()){
+                    usuarioDislike = true;
+                    break;
+                }
+            }
+            if (usuarioDeuMatch || usuarioDislike) {
+                continue;
+            }
+            int contadorMusica = 0;
+            int contadorFilme = 0;
+            int contadorSerie = 0;
+            int contadorJogo = 0;
+            int contadorEsporte = 0;
+            for (Musica musicaCurtida : usuario.getMusicasCurtidas()) {
+                for (Musica musicaDoBest : usuarioBestAtual.getMusicasCurtidas()) {
+                    if (musicaDoBest.getId() == musicaCurtida.getId()) {
+                        contadorMusica++;
                     }
                 }
-                for (Filme filmeCurtido : usuario.getFilmesCurtidos()) {
-                    for (Filme filmeDoBest : usuarioBestAtual.getFilmesCurtidos()) {
-                        if (filmeDoBest.getId() == filmeCurtido.getId()) {
-                            contadorFilme++;
-                        }
+            }
+            for (Filme filmeCurtido : usuario.getFilmesCurtidos()) {
+                for (Filme filmeDoBest : usuarioBestAtual.getFilmesCurtidos()) {
+                    if (filmeDoBest.getId() == filmeCurtido.getId()) {
+                        contadorFilme++;
                     }
                 }
-                for (Serie serieCurtida : usuario.getSeriesCurtidas()) {
-                    for (Serie serieDoBest : usuarioBestAtual.getSeriesCurtidas()) {
-                        if (serieDoBest.getId() == serieCurtida.getId()) {
-                            contadorSerie++;
-                        }
+            }
+            for (Serie serieCurtida : usuario.getSeriesCurtidas()) {
+                for (Serie serieDoBest : usuarioBestAtual.getSeriesCurtidas()) {
+                    if (serieDoBest.getId() == serieCurtida.getId()) {
+                        contadorSerie++;
                     }
                 }
-                for (Jogo jogoCurtido : usuario.getJogosCurtidos()) {
-                    for (Jogo jogoDoBest : usuarioBestAtual.getJogosCurtidos()) {
-                        if (jogoDoBest.getId() == jogoCurtido.getId()) {
-                            contadorJogo++;
-                        }
+            }
+            for (Jogo jogoCurtido : usuario.getJogosCurtidos()) {
+                for (Jogo jogoDoBest : usuarioBestAtual.getJogosCurtidos()) {
+                    if (jogoDoBest.getId() == jogoCurtido.getId()) {
+                        contadorJogo++;
                     }
                 }
-                for (Esporte esporteCurtido : usuario.getEsportesCurtidos()) {
-                    for (Esporte esporteDoBest : usuarioBestAtual.getEsportesCurtidos()) {
-                        if (esporteDoBest.getId() == esporteCurtido.getId()) {
-                            contadorEsporte++;
-                        }
+            }
+            for (Esporte esporteCurtido : usuario.getEsportesCurtidos()) {
+                for (Esporte esporteDoBest : usuarioBestAtual.getEsportesCurtidos()) {
+                    if (esporteDoBest.getId() == esporteCurtido.getId()) {
+                        contadorEsporte++;
                     }
                 }
-                int pontuacaoUsuarioAtual = contadorMusica + contadorFilme + contadorSerie + contadorJogo + contadorEsporte;
-                if (usuarioBest == null) {
-                    usuarioBest = usuarioBestAtual;
-                    pontuacaoUsuarioBest = pontuacaoUsuarioAtual;
-                }
-                if (pontuacaoUsuarioAtual > pontuacaoUsuarioBest) {
-                    usuarioBest = usuarioBestAtual;
-                    pontuacaoUsuarioBest = pontuacaoUsuarioAtual;
-                }
+            }
+            int pontuacaoUsuarioAtual = contadorMusica + contadorFilme + contadorSerie + contadorJogo + contadorEsporte;
+            if (usuarioBest == null) {
+                usuarioBest = usuarioBestAtual;
+                pontuacaoUsuarioBest = pontuacaoUsuarioAtual;
+            }
+            if (pontuacaoUsuarioAtual > pontuacaoUsuarioBest) {
+                usuarioBest = usuarioBestAtual;
+                pontuacaoUsuarioBest = pontuacaoUsuarioAtual;
             }
         }
         return usuarioBest;

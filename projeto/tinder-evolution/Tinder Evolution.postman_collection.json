@@ -395,7 +395,7 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/matches/2/avaliador/1",
+									"raw": "http://localhost:8080/matches/1/avaliador/2",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -403,9 +403,9 @@
 									"port": "8080",
 									"path": [
 										"matches",
-										"2",
+										"1",
 										"avaliador",
-										"1"
+										"2"
 									]
 								}
 							},
@@ -468,6 +468,27 @@
 									"path": [
 										"likes",
 										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UsuarioBest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/matches/1/best",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"matches",
+										"1",
+										"best"
 									]
 								}
 							},

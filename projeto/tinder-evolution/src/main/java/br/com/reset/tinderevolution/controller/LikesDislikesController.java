@@ -1,8 +1,8 @@
 package br.com.reset.tinderevolution.controller;
 
 import br.com.reset.tinderevolution.dominio.*;
-import br.com.reset.tinderevolution.gerenciador.LikeDislike;
-import br.com.reset.tinderevolution.gerenciador.Matches;
+import br.com.reset.tinderevolution.gerenciador.LikeDislikeGerenciador;
+import br.com.reset.tinderevolution.gerenciador.MatchesGerenciador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +13,8 @@ import java.util.List;
 public class LikesDislikesController {
 
     @Autowired
-    private LikeDislike gerenciadorLikeDislike;
-    private Matches gerenciadorMatches;
+    private LikeDislikeGerenciador gerenciadorLikeDislike;
+    private MatchesGerenciador gerenciadorMatches;
 
     //Musica
     @GetMapping ("/musica/{id-usuario}")
@@ -96,9 +96,20 @@ public class LikesDislikesController {
         return gerenciadorLikeDislike.descurtirEsporte(id, idAvaliador);
     }
 
-    //Usuario
-    @GetMapping ("{id-usuario}")
-    public List<Usuario> listarUsuariosCurtidos(@PathVariable("id-usuario") int id) {
-        return gerenciadorMatches.listarLikes(id);
+    //Curiosidade
+    @GetMapping ("/curiosidade/{id-usuario}")
+    public List<Curiosidade> listarCuriosidades(@PathVariable("id-usuario") int id) {
+        return gerenciadorLikeDislike.listarCuriosidade(id);
     }
+
+    @PostMapping("/curiosidade/{id-curiosidade}/avaliador/{id-avaliador}")
+    public Usuario curtirCuriosidade(@PathVariable("id-curiosidade") int id, @PathVariable("id-avaliador") int idAvaliador) {
+        return gerenciadorLikeDislike.definirCuriosidade(id, idAvaliador);
+    }
+
+    @DeleteMapping("/curiosidade/{id-curiosidade}/avaliador/{id-avaliador}")
+    public Usuario descurtirCuriosidade(@PathVariable("id-curiosidade") int id, @PathVariable("id-avaliador") int idAvaliador){
+        return gerenciadorLikeDislike.descurtirCuriosidade(id, idAvaliador);
+    }
+
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class LikeDislike {
+public class LikeDislikeGerenciador {
 
     private BibliotecaMusical bibliotecaMusical = new BibliotecaMusical();
     private UsuarioGerenciador gerenciadorUsuario = new UsuarioGerenciador();
@@ -120,6 +120,7 @@ public class LikeDislike {
         Usuario listaUsuario = gerenciadorUsuario.procurar(idUsuario);
         return listaUsuario.getJogosCurtidos();
     }
+
     //Esporte
     //Curtir esporte
     public Usuario curtirEsporte(int idEsporte, int idUsuario) {
@@ -145,6 +146,7 @@ public class LikeDislike {
         Usuario listaUsuario = gerenciadorUsuario.procurar(idUsuario);
         return listaUsuario.getEsportesCurtidos();
     }
+
     //Curiosidade
     //Definir Curiosidade
     public Usuario definirCuriosidade(int idCuriosidade, int idUsuario) {

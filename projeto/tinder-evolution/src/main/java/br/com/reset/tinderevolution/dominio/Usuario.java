@@ -25,7 +25,6 @@ public class Usuario {
     private List<Curiosidade> curiosidades = new ArrayList<>();
     private List<Usuario> usuariosCurtidos = new ArrayList<>();
     private List<Usuario> matches = new ArrayList<>();
-    private List<Usuario> best = new ArrayList<>();
 
     public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
@@ -144,8 +143,8 @@ public class Usuario {
     }
 
     // Adiciona músicas curtidas
-    public void salvarMusica(Musica musica) {
-        musicasCurtidas.add(musica);
+    public void salvarMusica(Musica musicaCurtida) {
+        musicasCurtidas.add(musicaCurtida);
     }
 
     //Deleta música curtida
@@ -218,15 +217,6 @@ public class Usuario {
         }
     }
 
-    //Adiciona Lista Best
-    public void salvarBest(Usuario usuarioBest) {
-        for (Usuario usuario : usuarioBest.matches) {
-            if (usuario.getId() != usuarioBest.getId()) {
-                best.add(usuarioBest);
-            }
-        }
-    }
-
     //Lista matches
     public List<Usuario> listarMatches() {
         return matches;
@@ -235,11 +225,6 @@ public class Usuario {
     //Lista usuários curtidos
     public List<Usuario> listarUsuariosCurtidos() {
         return usuariosCurtidos;
-    }
-
-    //Lista best
-    public List<Usuario> listarUsuarioBest(){
-        return best;
     }
 
     //toString
@@ -254,6 +239,7 @@ public class Usuario {
                 ", bio='" + bio + '\'' +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
+                ", foto=" + foto +
                 ", músicas curtidas=" + musicasCurtidas +
                 ", filmes curtidos=" + filmesCurtidos +
                 ", séries curtidas=" + seriesCurtidas +

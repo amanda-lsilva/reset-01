@@ -1,10 +1,7 @@
 package br.com.reset.tinderevolution.controller;
 
-import br.com.reset.tinderevolution.dominio.Musica;
 import br.com.reset.tinderevolution.dominio.Usuario;
-import br.com.reset.tinderevolution.gerenciador.LikeDislike;
-import br.com.reset.tinderevolution.gerenciador.Matches;
-import br.com.reset.tinderevolution.gerenciador.UsuarioGerenciador;
+import br.com.reset.tinderevolution.gerenciador.MatchesGerenciador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +12,17 @@ import java.util.List;
 public class MatchesController {
 
     @Autowired
-    private Matches gerenciadorMatches;
+    private MatchesGerenciador gerenciadorMatches;
 
     //Listar Matches
     @GetMapping("{id-usuario}")
     public List<Usuario> listarMatches(@PathVariable("id-usuario") int id) {
         return gerenciadorMatches.listarMatchesUsuario(id);
+    }
+
+    @GetMapping("{idUsuarioBest}/best")
+    public Usuario mostrarUsuarioBest(@PathVariable("idUsuarioBest")  int id){
+        return gerenciadorMatches.criarBest(id);
     }
 
     @PostMapping("/{id-avaliado}/avaliador/{id-avaliador}")
